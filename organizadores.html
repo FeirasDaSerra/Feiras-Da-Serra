@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+	<title>Organizadores - Feiras da Serra</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+	<header>
+		<div class="container"><div class="logo">
+			<picture>
+				<source media="(max-width: 200px)" srcset="Imagens/logo-m.png" type="image/png">
+				<source media="(max-width: 600px)" srcset="Imagens/logo-g.png" type="image/png">
+				<img src="Imagens/logo.png" alt="Logotipo do site">
+			</picture>
+			<nav class="menu">
+				<a href="index.html">Início</a>
+				<a href="feiras.html">Feiras</a>
+				<a href="expositores.html">Expositores</a>
+				<a href="organizadores.html">Organizadores</a>
+				<a href="#" id="botao-contato">Contato</a>
+			</nav>
+			
+			<!-- Ícones ocultos inicialmente -->
+			<div id="icones-contato" style="display: none; text-align: center; margin-top: 10px;">
+				<a href="#"><img src="Imagens/instagram-m.png" alt="Instagram" width="30"></a>
+				<a href="#"><img src="Imagens/communication-m.png" alt="Facebook" width="30"></a>
+				<a href="#"><img src="Imagens/youtube-m.png" alt="YouTube" width="30"></a>
+				<a href="#"><img src="Imagens/whatsapp-m.png" alt="WhatsApp" width="30"></a>
+				</div>
+	</header>
+
+	<section class="banner">
+		<h2>Seja um Organizador de Feiras!</h2>
+		<p>Compartilhe cultura, produtos e experiências organizando sua própria feira.</p>
+	</section>
+
+	<section class="expositor-destaque">
+		<h3>Como Funciona?</h3>
+		<div class="expositor">
+			<div class="imagem-expositor"></div>
+			<div class="info-expositor">
+				<p>Ao se cadastrar como organizador, você poderá divulgar suas feiras, gerenciar expositores e alcançar
+					um público maior com o apoio da plataforma Feiras da Serra.</p>
+				<ul>
+					<li>✔ Cadastro rápido e gratuito</li>
+					<li>✔ Gerenciamento de expositores e feiras</li>
+					<li>✔ Suporte da equipe técnica</li>
+					<li>✔ Visibilidade em toda a região</li>
+				</ul>
+				<a href="#" class="btn">Cadastre sua Feira</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="feiras-expositor">
+		<h3>Feiras Organizadas Recentemente</h3>
+		<div class="feiras-lista">
+			<div class="card-feira">
+				<div class="img-feira"></div>
+				<h4>Feira do Artesanato</h4>
+				<p>15/06/2025 - Praça Central</p>
+				<p>Evento com artesãos locais e comidas típicas.</p>
+				<a href="#" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira">
+				<div class="img-feira"></div>
+				<h4>Feira da Colônia</h4>
+				<p>20/07/2025 - Parque Rural</p>
+				<p>Produtos coloniais, apresentações e oficinas.</p>
+				<a href="#" class="btn">Ver mais</a>
+			</div>
+		</div>
+	</section>
+
+	<footer id="contato">
+		<div class="footer-container">
+			<div class="redes-sociais">
+				<a href="#"><img src="Imagens/instagram.png" alt="Instagram"></a>
+				<a href="#"><img src="Imagens/communication.png" alt="Facebook"></a>
+				<a href="#"><img src="Imagens/youtube.png" alt="YouTube"></a>
+				<a href="#"><img src="Imagens/whatsapp.png" alt="WhatsApp"></a>
+			</div>
+			<div class="info-contato">
+				<p>Acesse as nossas redes sociais</p>
+			</div>
+		</div>
+	</footer>
+	<script>
+		document.getElementById("botao-contato").addEventListener("click", function(e) {
+		  e.preventDefault(); // Evita que a página role
+		  const icones = document.getElementById("icones-contato");
+		  // Alterna entre mostrar e esconder
+		  icones.style.display = icones.style.display === "none" ? "block" : "none";
+		});
+	  </script>
+</body>
+
+</html>

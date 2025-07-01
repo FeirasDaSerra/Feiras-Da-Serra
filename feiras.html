@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+	<title>Feiras - Feiras da Serra</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				<picture>
+					<source media="(max-width: 200px)" srcset="Imagens/logo-m.png" type="image/png">
+					<source media="(max-width: 600px)" srcset="Imagens/logo-g.png" type="image/png">
+					<img src="Imagens/logo.png" alt="Logotipo do site">
+				</picture>
+			</div>
+			<nav class="menu">
+				<a href="index.html">Início</a>
+				
+				<div class="menu-item">
+					<a href="#"><span class="contato-texto">Contato</span></a>
+					<div class="submenu">
+						<a href="#"><img src="Imagens/instagram.png" alt="Instagram"></a>
+						<a href="#"><img src="Imagens/communication.png" alt="Facebook"></a>
+						<a href="#"><img src="Imagens/youtube.png" alt="YouTube"></a>
+						<a href="https://chat.whatsapp.com/KoK5kCKLxOq5FdUKI0Y8XU?mode=r_c"><img src="Imagens/whatsapp.png" alt="WhatsApp"></a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<section class="destaque banner">
+		<h2>CONFIRA O CALENDÁRIO GERAL DE FEIRAS!</h2>
+		<a href="#" class="btn" id="btnCalendario">CONFIRA</a>
+		
+	</section>
+	<section id="tabela-feiras">
+		<h3>Calendário Geral de Feiras</h3>
+		<table id="tabela" border="1" cellpadding="10">
+			<thead>
+				<tr>
+					<th>Nome da Feira</th>
+					<th>Data</th>
+					<th>Horário</th>
+					<th>Cidade</th>
+					<th>Tipo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- As linhas serão inseridas via JavaScript -->
+			</tbody>
+		</table>
+	</section>
+	
+
+	<div class="filtros">
+		<form>
+			<select name="cidade" id="cidade">
+				<option value="caxias">Caxias do Sul</option>
+				<option value="farroupilha">Farroupilha</option>
+				<option value="bento">Bento Gonçalves</option>
+				<option value="garibaldi">Garibaldi</option>
+				<option value="flores">Flores da Cunha</option>
+			</select>
+				<label for="data">Escolha a data:</label>
+				<input type="date" name="data" id="data">
+
+			<select name="tipo" id="tipo">
+				<option>Tipo de feira</option>
+				<option value="rua">De Rua</option>
+				<option value="fechado">Local Fechado</option>
+			</select>
+		</form>
+	</div>
+	
+	
+
+	<section class="feiras-expositor">
+		<h3>Feiras Destacadas</h3>
+		<div class="feiras-lista">
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-06-01"
+				data-tipo="rua">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/FEIRA DOMINICAL.png" alt="Feira do Parque" />
+					</div>
+				<h4>FEIRA DOMINICAL DO JARDIM AMÉRICA</h4>
+				<p>06/07/2025, das 9h ás 18h</p>
+				<p>A Feira Dominical do Jardim América acontece, tradicionalmente, no segundo domingo de cada mês, no parque do bairro Jardim América, em frente à Delegacia da Polícia Civil. O evento reúne uma diversidade de expositores nas áreas de gastronomia, brechó, artesanato, confecções e muito mais. Venha conhecer de perto o trabalho dos nossos empreendedores locais. Esperamos por você!</p>
+				<a href="https://wa.me/5554984221474?text=Ol%C3%A1+Maria+Albertina%2C+quero+saber+mais+sobre+a+Feira+Dominical+do+Jardim+Am%C3%A9rica%21
+" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-07-12"
+				data-tipo="fechado">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/MOINHOS DE VENTO.png" alt="Feira do Parque" />
+					</div>
+				<h4>MOINHOS DE VENTO</h4>
+				<p>12/07/2025, das 10h ás 18h </p>
+				<p>Rua José Bressan, nº151 - Salão do Lot. Moinhos de Vento, Caxias do Sul</p>
+				<p>Artesanato, decoração, suculentas, acessórios, cosméticos, moda circular, gastronomia, food trucks e espaço kids: a Feira do Moinhos de Vento é um convite para viver uma experiência única. Venha nos visitar e se encantar com o melhor que nossos expositores têm a oferecer!
+</p>
+				<a href="https://wa.me/5554992586556?text=Ol%C3%A1+C.+Leticia%2C+quero+saber+mais+sobre+a+Feira+Moinhos+de+Vento%21
+" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-07-06"
+				data-tipo="rua">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/PAISAGENS DO TEMPO.png" alt="Feira Paisagens do Tempo" />
+					</div>
+				<h4>FEIRA PAISAGENS DO TEMPO</h4>
+				<p>06/07/2025, das 13h ás 18h</p>
+				<p>A Feira Paisagens do Tempo acontece, tradicionalmente, no primeiro domingo de cada mês, na Praça de Ana Rech. O evento reúne uma diversidade de expositores nas áreas de gastronomia, brechó, artesanato, confecções e muito mais. Venha conhecer de perto o trabalho dos nossos empreendedores locais. Esperamos por você!</p>
+				<a href="https://wa.me/5554981162914?text=Ol%C3%A1+Tassiana%2C+quero+saber+mais+sobre+a+Feira+Paisagens+do+Tempo%21
+" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-07-06"
+				data-tipo="rua">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/FEIRA CINQUENTENÁRIO.png" alt="Feira Paisagens do Tempo" />
+					</div>
+				<h4>FEIRA CINQUENTENÁRIO</h4>
+				<p>06/07/2025, das 10h ás 17h30min</p>
+				<p>A Feira Cinquentenário acontece, tradicionalmente, no primeiro domingo de cada mês, no Parque Cinquentenário. O evento reúne uma diversidade de expositores nas áreas de gastronomia, brechó, artesanato, confecções e muito mais. Venha conhecer de perto o trabalho dos nossos empreendedores locais. Esperamos por você!</p>
+				<a href="https://wa.me/5554991296338?text=Ol%C3%A1+Maria+Helena%2C+quero+saber+mais+sobre+a+Feira+do+Cinquenten%C3%A1rio%21
+" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-07-13"
+				data-tipo="rua">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/FEIRA DA LAGOA.png" alt="Feira da Lagoa" />
+					</div>
+				<h4>FEIRA DA LAGOA</h4>
+				<p>13/07/2025, das 9h ás 18h</p>
+				<p>A Feira da Lagoa acontece, tradicionalmente, no Segundo domingo de cada mês, no Parque da Lagoa do Desvio Rizzo. O evento reúne uma diversidade de expositores nas áreas de gastronomia, brechó, artesanato, confecções e muito mais. Venha conhecer de perto o trabalho dos nossos empreendedores locais. Esperamos por você!</p>
+				<a href="https://wa.me/5554991773897?text=Ol%C3%A1+Ziza%2C+quero+saber+mais+sobre+a+Feira+da+Lagoa%21
+" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-07-12"
+				data-tipo="fechado">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/FEIRA DA BÊRGA.png" alt="Feira da Bêrga" />
+					</div>
+				<h4>FEIRA DA BÊRGA</h4>
+				<p>12/07/2025, das 9h ás 18h</p>
+				<p>Rua Dr. Augusto Pestana, nº145, São Pelegrino, Caxias do Sul. Venha fazer parte da primeira edição da Feira da Bêrga + Zero, vestuário, bebidas, gastronomia, artesanato e muito mais!</p>
+				<a href="https://wa.me/5554993238932?text=Ol%C3%A1+Juliana%2C+quero+saber+mais+sobre+a+Feira+da+B%C3%AArga%21
+" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-07-13"
+				data-tipo="rua">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/FEIRA TURÍSTICA E CULTURAL.png" alt="Feira Turística e Cultural" />
+					</div>
+				<h4>FEIRA TURÍSTICA E CULTURAL</h4>
+				<p>13/07/2025, das 9h ás 18h</p>
+				<p>A Feira da Turística e Cultural acontece, tradicionalmente, no Segundo domingo de cada mês, na Praça das Feiras, no São Pelegrino. O evento reúne uma diversidade de expositores nas áreas de gastronomia, brechó, artesanato, confecções, numismática, antiguidades e muito mais. Venha conhecer de perto o trabalho dos nossos empreendedores locais. Esperamos por você!</p>
+				<a href="https://wa.me/5554993292272?text=Ol%C3%A1+Paulo%2C+quero+saber+mais+sobre+a+Feira+Tur%C3%ADstica+e+Cultural%21
+" class="btn">Ver mais</a>
+			</div>
+			<div class="card-feira"
+				data-cidade="caxias"
+				data-data="2025-07-20"
+				data-tipo="rua">
+			
+				<div class="img-feira">
+					<img src="Imagens/Cards/FEIRA MAESA CULTURAL.png" alt="Feira Maesa Cultural" />
+					</div>
+				<h4>FEIRA MAESA CULTURAL</h4>
+				<p>13/07/2025, das 9h ás 18h</p>
+				<p>A Feira Maesa Cultural acontece, tradicionalmente, no terceiro domingo de cada mês, na Rua Plácido de Castro, em frente à Antiga Maesa, no centro de Caxias do Sul. O evento reúne uma diversidade de expositores nas áreas de gastronomia, brechó, artesanato, confecções, numismática, antiguidades e muito mais. Venha conhecer de perto o trabalho dos nossos empreendedores locais. Esperamos por você!</p>
+				<a href="https://wa.me/5554993292272?text=Ol%C3%A1+Paulo%2C+quero+saber+mais+sobre+a+Feira+Maesa+Cultural%21
+" class="btn">Ver mais</a>
+			</div>
+	</section>
+
+	<footer id="contato">
+		<div class="footer-container">
+			<div class="redes-sociais">
+				<a href="#"><img src="Imagens/instagram.png" alt="Instagram"></a>
+				<a href="#"><img src="Imagens/communication.png" alt="Facebook"></a>
+				<a href="#"><img src="Imagens/youtube.png" alt="YouTube"></a>
+				<a href="https://chat.whatsapp.com/KoK5kCKLxOq5FdUKI0Y8XU?mode=r_c"><img src="Imagens/whatsapp.png" alt="WhatsApp"></a>
+			</div>
+			<div class="info-contato">
+				<p>Acesse as nossas redes sociais</p>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const cidadeSelect = document.getElementById("cidade");
+			const dataInput = document.getElementById("data");
+			const tipoSelect = document.getElementById("tipo");
+			const cards = document.querySelectorAll(".card-feira");
+			const btnCalendario = document.getElementById("btnCalendario");
+			const tabelaFeiras = document.getElementById("tabela-feiras");
+			const tabelaBody = document.querySelector("#tabela tbody");
+
+			function filtrarFeiras() {
+				const cidade = cidadeSelect.value;
+				const data = dataInput.value;
+				const tipo = tipoSelect.value;
+
+				cards.forEach(card => {
+					const cardCidade = card.dataset.cidade;
+					const cardData = card.dataset.data;
+					const cardTipo = card.dataset.tipo;
+
+					const cidadeMatch = !cidade || cardCidade === cidade;
+					const dataMatch = !data || cardData === data;
+					const tipoMatch = !tipo || tipo === "Tipo de feira" || cardTipo === tipo;
+
+					card.style.display = (cidadeMatch && dataMatch && tipoMatch) ? "block" : "none";
+				});
+			}
+
+			function exibirTabelaFeiras() {
+				tabelaBody.innerHTML = ""; // Limpa a tabela
+
+				cards.forEach(card => {
+		
+					
+					const nome = card.querySelector("h4").textContent;
+					const dataTexto = card.querySelectorAll("p")[0].textContent;
+					const cidade = card.dataset.cidade || "N/D";
+					const tipo = card.dataset.tipo || "N/D";
+
+					const match = dataTexto.match(/(\d{2}\/\d{2}\/\d{4}), das (.+)/);
+					const data = match ? match[1] : "N/D";
+					const horario = match ? match[2] : "N/D";
+
+					const tr = document.createElement("tr");
+					tr.innerHTML = `
+							<td>${nome}</td>
+							<td>${data}</td>
+							<td>${horario}</td>
+							<td>${cidade}</td>
+							<td>${tipo}</td>
+						`;
+					tabelaBody.appendChild(tr);
+				});
+
+				tabelaFeiras.style.display = "block";
+				tabelaFeiras.scrollIntoView({ behavior: "smooth" });
+			}
+
+			cidadeSelect.addEventListener("change", filtrarFeiras);
+			dataInput.addEventListener("change", filtrarFeiras);
+			tipoSelect.addEventListener("change", filtrarFeiras);
+
+			btnCalendario.addEventListener("click", function (e) {
+				e.preventDefault();
+				exibirTabelaFeiras();
+			});
+		});
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+	<title>Expositores - Feiras da Serra</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+			<picture>
+				<source media="(max-width: 200px)" srcset="Imagens/logo-m.png" type="image/png">
+				<source media="(max-width: 600px)" srcset="Imagens/logo-g.png" type="image/png">
+				<img src="Imagens/logo.png" alt="Logotipo do site">
+			</picture>
+		</div>
+			<nav class="menu">
+				<a href="index.html">Início</a>
+				<a href="feiras.html">Feiras</a>
+				<a href="expositores.html">Expositores</a>
+				<a href="organizadores.html">Organizadores</a>
+				<a href="#contato">Contato</a>
+			</nav>
+		</div>
+	</header>
+
+	<section class="banner">
+		<h2>Expositores em Destaque</h2>
+		<p>Conheça os participantes das nossas feiras!</p>
+	</section>
+
+	<div class="filtros">
+		<form>
+			<select name="categoria" id="categoria">
+				<option value="">Categoria</option>
+				<option value="alimentos">Alimentos</option>
+				<option value="artesanato">Artesanato</option>
+				<option value="tecnologia">Tecnologia</option>
+			</select>
+			<select name="cidade" id="cidade">
+				<option value="">Cidade</option>
+				<option value="caxias">Caxias do Sul</option>
+				<option value="farroupilha">Farroupilha</option>
+				<option value="bento">Bento Gonçalves</option>
+				<option value="garibaldi">Garibaldi</option>
+				<option value="flores">Flores da Cunha</option>
+			</select>
+			<button type="submit" id="btn-filtrar">Filtrar</button>
+		</form>
+
+	</div>
+
+	<section class="feiras-lista"> <!-- Usamos a mesma classe da seção das feiras -->
+		<div class="card-feira" data-categoria="artesanato" data-cidade="caxias">
+			<div class="img-feira"></div>
+			<h4>Artes da Serra</h4>
+			<p><strong>Categoria:</strong> <span>Artesanato</span></p>
+			<p><strong>Cidade:</strong> <span>Caxias do Sul</span></p>
+			<p>Produtos feitos à mão com materiais sustentáveis. Conheça nossas criações únicas!</p>
+			<a href="#" class="btn">Saiba mais</a>
+		</div>
+		<div class="card-feira" data-categoria="alimentos" data-cidade="caxias">
+			<div class="img-feira"></div>
+			<h4>Maria</h4>
+			<p><strong>Categoria:</strong> <span>Alimentos</span></p>
+			<p><strong>Cidade:</strong> <span>Caxias do Sul</span></p>
+			<p>Produtos feitos à mão com materiais sustentáveis. Conheça nossas criações únicas!</p>
+			<a href="#" class="btn">Saiba mais</a>
+		</div>
+		<div class="card-feira" data-categoria="tecnologia" data-cidade="farroupilha">
+			<div class="img-feira"></div>
+			<h4>Artes da Serra</h4>
+			<p><strong>Categoria:</strong> <span>Tecnologia</span></p>
+			<p><strong>Cidade:</strong> <span>Farroupilha</span></p>
+			<p>Produtos feitos à mão com materiais sustentáveis. Conheça nossas criações únicas!</p>
+			<a href="#" class="btn">Saiba mais</a>
+		</div>
+		<div class="card-feira" data-categoria="artesanato" data-cidade="bento">
+			<div class="img-feira"></div>
+			<h4>Artes da Serra</h4>
+			<p><strong>Categoria:</strong> <span>Artesanato</span></p>
+			<p><strong>Cidade:</strong> <span>Bento</span></p>
+			<p>Produtos feitos à mão com materiais sustentáveis. Conheça nossas criações únicas!</p>
+			<a href="#" class="btn">Saiba mais</a>
+		</div>
+	</section>
+
+	<footer id="contato">
+		<div class="footer-container">
+			<div class="redes-sociais">
+				<a href="#"><img src="Imagens/instagram.png" alt="Instagram"></a>
+				<a href="#"><img src="Imagens/communication.png" alt="Facebook"></a>
+				<a href="#"><img src="Imagens/youtube.png" alt="YouTube"></a>
+				<a href="#"><img src="Imagens/whatsapp.png" alt="WhatsApp"></a>
+			</div>
+			<div class="info-contato">
+				<p>Acesse as nossas redes sociais</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const categoriaSelect = document.getElementById("categoria");
+		const cidadeSelect = document.getElementById("cidade");
+		const btnFiltrar = document.getElementById("btn-filtrar");
+
+		// Pegando tanto .expositor quanto .card-feira
+		const expositores = document.querySelectorAll(".expositor, .card-feira");
+
+		btnFiltrar.addEventListener("click", function (event) {
+			event.preventDefault();
+
+			const categoria = categoriaSelect.value.toLowerCase();
+			const cidade = cidadeSelect.value.toLowerCase();
+
+			expositores.forEach(expositor => {
+				const expCategoria = expositor.dataset.categoria?.toLowerCase() || '';
+				const expCidade = expositor.dataset.cidade?.toLowerCase() || '';
+
+				const categoriaMatch = !categoria || categoria === expCategoria;
+				const cidadeMatch = !cidade || cidade === expCidade;
+
+				if (categoriaMatch && cidadeMatch) {
+					expositor.style.display = ""; // volta ao estilo padrão definido no CSS
+				} else {
+					expositor.style.display = "none";
+				}
+			});
+		});
+	});
+</script>
+
+  
+</html>

@@ -1,0 +1,625 @@
+/* Reset básico */
+* {
+	font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 20px;
+	color: #7e0202;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to right, #c8e6c9, #a1c98f); /* vegetação + neblina */
+	color: #094b01;
+	line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+	padding: 20px 0;
+	box-shadow: 0 2px 5px rgba(1, 87, 1, 0.2);
+	background-attachment: fixed; /*Para fixar o fundo, to up, toleft, to right, 45deg, xdeg para mudar o ângulo do gradiente*/
+}
+
+header .container {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	/*justify-content: space-between;*/
+	justify-content: flex-start; /* muda para alinhar tudo à esquerda */
+	align-items: center;
+	flex-wrap: wrap; /* permite quebra de linha caso o conteúdo ultrapasse a largura. */
+	gap: 50px; /* distância entre logo e nav */
+}
+
+.logo {
+	flex-shrink: 0;
+}
+
+.logo img {
+	width: auto;
+	height: auto;
+	max-height: 201px;
+	max-width: 100%;
+	animation: girarMoeda 2s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.saudacao {
+	text-align: center;
+	font-size: 200%;
+	animation: pulsar 2s ease-in-out infinite;
+}
+
+header h1 {
+	font-size: 90%;
+}
+
+header #principal {
+	text-align: center;
+}
+
+nav a {
+	margin: 1%;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+	font-size: 150%;
+}
+
+nav a:hover {
+	color: #123f00;
+}
+
+header nav {
+	display: flex;
+	/*justify-content: flex-end;*/
+	justify-content: center; /* centraliza os links dentro do nav */
+	flex-grow: 1;
+	gap: 20px; /* Espaçamento entre os links */
+}
+
+/* Submenu contato */
+.menu-item {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.menu-item .contato-texto {
+	margin: 1%;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+	font-size: inherit;
+	color: inherit; /* herda a cor padrão */
+  }
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	padding: 10px;
+	z-index: 100;
+	flex-direction: initial;
+	gap: 10px;
+}
+
+.submenu img {
+	width: 36px;
+	transition: transform 0.2s;
+}
+
+.submenu img:hover {
+	transform: scale(1.1);
+}
+.menu-item:hover .contato-texto {
+	opacity: 0;
+	visibility: hidden;
+	width: 0;
+}
+
+.menu-item:hover .submenu {
+	display: flex;
+}
+/*Corpo*/  
+.banner {
+	text-align: center;
+}
+
+.banner h2 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.banner p {
+	font-size: 100%;
+	margin-bottom: 2%;
+}
+
+.dica-clique {
+	font-size: 0.95rem;
+	color: #555;
+	margin-top: 10px;
+}
+
+/* Filtros */
+.filtros {
+	background-color: #b9f8ac;
+	padding: 20px;
+	margin: 30px auto;
+	max-width: 1200px;
+	border-radius: 10px;
+	border-left: 6px solid #8e1a1a;
+}
+
+.filtros form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.filtros label {
+	font-weight: bold;
+}
+
+.filtros select,
+.filtros input[type="radio"] {
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+.filtros button {
+	padding: 10px 20px;
+	background-color: #8e1a1a;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.filtros button:hover {
+	background-color: #5d0f0f;
+}
+
+/* Seção de Vídeo de Apresentação */
+.video-apresentacao {
+	padding: 60px 20px;
+	text-align: center;
+}
+
+.video-apresentacao h2 {
+	font-size: 150%;
+	margin-bottom: 30px;
+}
+
+.video-container {
+	max-width: 800px;
+	margin: 0 auto;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+/* Expositor em destaque */
+.expositor {
+	background-color: white;
+	width: 280px;
+	padding: 15px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	text-align: center;
+	transition: 0.3s ease;
+}
+
+.expositor:hover {
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	transform: translateY(-5px);
+}
+
+.imagem-expositor {
+	background-color: #ccc;
+	height: 150px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+/*Tabela*/
+/* Estilo geral da tabela */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 30px auto;
+	background-color: white;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+thead {
+	background-color:  #5d4037;
+	color: white;
+	text-align: left;
+}
+
+/* Células do cabeçalho */
+thead th {
+	padding: 15px;
+	font-weight: bold;
+	font-size: 1.1em;
+
+	color: white;
+}
+
+/* Células do corpo */
+tbody td {
+	padding: 12px 15px;
+	border-bottom: 1px solid #ddd;
+	color: #094b01;
+	background-color: #f9fff9;
+	font-size: 0.95em;
+}
+
+/* Alternância de cor nas linhas */
+tbody tr:nth-child(even) {
+	background-color: #eafbe9;
+}
+
+/* Hover */
+tbody tr:hover {
+	background-color: #cde7cc;
+}
+/* Cards de feiras */
+.feiras-lista {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.card-feira {
+	background-color: white;
+	width: 280px;
+	padding: 15px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	text-align: center;
+	transition: 0.3s ease;
+}
+
+.card-feira:hover {
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	transform: translateY(-5px);
+}
+
+.img-feira {
+	aspect-ratio: 1 / 1; /* Torna a imagem quadrada */
+	overflow: hidden;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.img-feira img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+}
+.card-feira h4 {
+	margin: 10px 0 5px;
+	font-size: 18px;
+	color: #2e7d32;
+}
+
+.card-feira p {
+	font-size: 14px;
+	margin-bottom: 10px;
+	margin: 0.5em 0;
+	word-wrap: break-word;
+	line-height: 1.4;
+}
+
+.btn {
+	background-color: #5d4037;
+	color: white;
+	padding: 8px 16px;
+	border: none;
+	text-decoration: none;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.btn:hover {
+	background-color: #3e2723;
+}
+
+/* Links Centrais */
+.links-centrais {
+	text-align: center;
+	padding: 50px 20px;
+}
+
+.links-centrais h2 {
+	font-size: 200%;
+	margin-bottom: 30px;
+}
+
+.botoes-centrais {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.botao-link {
+	color: #7e0202;
+	padding: 2% 2%;
+	text-decoration: none;
+	border: 5px solid transparent;
+	border-radius: 50%;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+	background-image:
+		linear-gradient(#ffee00, #aca004),
+		linear-gradient(to right, #009e05, #174601);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+	box-shadow: 5px 5px 0px rgba(1, 87, 1, 0.2);
+	font-size: 100%;
+	display: inline-block;
+	max-width: 100%;
+	white-space: nowrap;
+}
+
+.botao-link:hover {
+	background-image:
+		linear-gradient(#f8f685, #8b7e02),
+		linear-gradient(to right, #a0eca2, #3db803);
+	color: #002c02;
+}
+
+/* Rodapé */
+footer {
+	color: #7e0202;
+	padding: 20px 0;
+	background: linear-gradient(to right, #c8e6c9, #a1c98f, #46a149);
+	text-align: center;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.info-contato p {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.redes-sociais {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.redes-sociais img {
+	width: 36px;
+	transition: transform 0.2s;
+}
+
+.redes-sociais img:hover {
+	transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+	/* Reduz fontes e espaçamentos para dispositivos pequenos */
+	body {
+		font-size: 16px;
+	}
+
+	header .container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.logo img {
+		max-height: 80px;
+		margin-bottom: 10px;
+	}
+
+	.saudacao {
+		font-size: 140%;
+	}
+
+	nav {
+		width: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+
+	nav a {
+		font-size: 90%;
+		margin: 5px 10px;
+	}
+
+	.filtros form {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 10px;
+	}
+
+	.filtros button {
+		width: 100%;
+		font-size: 1em;
+	}
+
+	.card-feira, .expositor {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.botao-link {
+		font-size: 90%;
+		padding: 10px;
+		border-radius: 20px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.video-container iframe,
+	.video-container video {
+		width: 100%;
+		height: auto;
+	}
+
+	.links-centrais h2 {
+		font-size: 140%;
+	}
+
+	.footer-container {
+		padding: 20px;
+	}
+
+	.redes-sociais {
+		gap: 10px;
+	}
+
+	.redes-sociais img {
+		width: 28px;
+	}
+	.menu {
+		gap 4px;
+	}
+
+	.menu-item {
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+	}
+
+	.menu-item:hover .submenu {
+		position: static;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		background: none;
+		box-shadow: none;
+		padding: 5px 0;
+	}
+
+	.submenu {
+		display: flex;
+		position: static;
+		flex-direction: row;
+		gap: 1px;
+		background: none;
+		box-shadow: none;
+		padding: 5px 0;
+	}
+
+	.submenu img {
+		width: 32px;
+		
+	}
+}
+
+@media (max-width: 768px) {
+	.expositor {
+		flex-direction: column;
+	}
+
+	.footer-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.filtros form {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.redes-sociais img {
+		width: 30px;
+	}
+
+	.info-contato p {
+		font-size: 1em;
+	}
+
+	nav {
+		margin-top: 10px;
+	}
+
+	.logo img {
+		max-height: 100px;
+	}
+
+	nav a {
+		font-size: 80%;
+		margin: 0 5px;
+	}
+	.menu {
+		gap: 4px;
+	}
+
+	.submenu {
+		gap: 1px;         /* ícones mais próximos */
+		margin: 0px;
+		padding: 0px;     /* menos espaço ao redor */
+	}
+
+	.submenu img {
+		width: 28px;      /* imagens um pouco menores */
+}
+/*Tabela de feiras*/
+table, thead, tbody, th, td, tr {
+	display: block;
+}
+
+thead {
+	display: none;
+}
+
+tbody td {
+	position: relative;
+	padding-left: 50%;
+	text-align: left;
+}
+
+tbody td::before {
+	position: absolute;
+	top: 12px;
+	left: 15px;
+	width: 45%;
+	white-space: nowrap;
+	font-weight: bold;
+	color: #5d0f0f;
+}
+}
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+@keyframes girarMoeda {
+	from {
+	  transform: rotateY(0deg);
+	}
+	to {
+	  transform: rotateY(360deg);
+	}
+}
